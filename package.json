@@ -4,36 +4,36 @@
     "description": "login-app",
     "main": "main.js",
     "scripts": {
-      "start": "node main.ts",
-      "dev": "nodemon main.ts",
-      "test": "echo \"Error: no test specified\" && exit 1"
+        "start": "node rund build && node build/main.js",
+        "dev": "nodemon",
+        "test": "echo \"Error: no test specified\" && exit 1"
     },
     "repository": {
-      "type": "git",
-      "url": "git+ssh://git@github.com/samf2022/login-app.git"
+        "type": "git",
+        "url": "git+ssh://git@github.com/samf2022/login-app.git"
     },
     "keywords": [
-      "login"
+        "login"
     ],
     "author": "Santiago Medina",
     "license": "MIT",
     "bugs": {
-      "url": "https://github.com/samf2022/login-app/issues"
+        "url": "https://github.com/samf2022/login-app/issues"
     },
     "homepage": "https://github.com/samf2022/login-app#readme",
     "dependencies": {
-      "cors": "2.8.5",
-      "express": "4.18.1",
-      "mongoose": "6.5.5"
+        "cors": "2.8.5",
+        "express": "4.18.1",
+        "mongoose": "6.5.5"
     },
     "devDependencies": {
-      "@types/cors": "2.8.12",
-      "@types/express": "4.17.13",
-      "@types/mongoose": "5.11.97",
-      "@types/node": "18.7.16",
-      "dotenv": "16.0.2",
-      "nodemon": "2.0.19",
-      "typescript": "4.8.2"
+        "@types/cors": "2.8.12",
+        "@types/express": "4.17.13",
+        "@types/mongoose": "5.11.97",
+        "@types/node": "18.7.16",
+        "dotenv": "16.0.2",
+        "nodemon": "2.0.19",
+        "ts-node": "^10.9.1",
+        "typescript": "4.8.2"
     }
-  }
-  
+}
