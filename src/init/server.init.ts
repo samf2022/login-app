@@ -16,6 +16,8 @@ export class Server implements iServer {
     }
     middlewares(): void {
         this.app.use(cors())
+        this.app.use(express.json())
+        this.app.use(express.urlencoded({extended: true}))
     }
     initialized(): void {
         this.app.listen(this.port, () => {
