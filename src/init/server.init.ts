@@ -3,6 +3,7 @@ import { iServer } from '@models/server.model'
 import express, { Application, Express } from 'express'
 import cors from 'cors'
 import { router } from '../routes/user.routes'
+import { DB } from '../config/mongo.config'
 
 export class Server implements iServer {
     app: Application = express()
@@ -10,6 +11,7 @@ export class Server implements iServer {
     constructor(){
         this.middlewares()
         this.routes()
+        this.db()
     }
     routes(): void {
         this.app.use('/api/v1', router)
@@ -23,5 +25,9 @@ export class Server implements iServer {
         this.app.listen(this.port, () => {
             console.log(`Listening on port: ${this.port}`)
         })
+    }
+    db(): void{
+        const db = new DB()
+        db.DbConnect()
     }
 }
