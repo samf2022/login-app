@@ -1,6 +1,7 @@
 import { Response, Request, Router } from "express";
+import { getAllUser } from "../controllers/user.controllers";
 const router: Router = Router()
 
-router.get('/', (req, res) => {res.send('Hello, World!')})
+router.get('/', getAllUser)
 
 export {router}
